@@ -106,12 +106,44 @@ var mrGreen =  {
 //Iteration 2
 //random selector
 function randomSelector(array) {
-return array[Math.floor(Math.random() * array.length)];
+  var result = "";
+  result = array[Math.floor(Math.random() * array.length)];
 
+   return result;
 }
 
-console.log(randomSelector(weapons));
+// console.log(randomSelector(weapons));
 
-function pickMistery(array) {
-  
-}
+  // var misteryEnvelope = [];
+function pickMistery() {
+
+  let misteryEnvelope = [];
+  //  return misteryEnvelope.push(randomSelector(charactersArray));
+    misteryEnvelope.push(randomSelector(weapons));
+    misteryEnvelope.push(randomSelector(rooms));
+    misteryEnvelope.push(randomSelector(charactersArray));
+     // randomSelector();
+// /   / randomSelector();
+
+    console.log(misteryEnvelope[0].name);
+     console.log(misteryEnvelope[1].name);
+      console.log(misteryEnvelope[2].first_name);
+   }
+
+pickMistery();
+
+//iteration 3
+function revealMistery(misteryEnvelope) {
+
+  // this.charactersArray = charactersArray;
+  // this.rooms = rooms;
+  // this.weapons = weapons;
+  // getMisteryEnvelope = function() {
+    return misteryEnvelope[2].first_name + " " + misteryEnvelope[1].name + " " 
+    + misteryEnvelope[0].name;
+  //    <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!
+  }
+
+
+
+console.log(revealMistery());

@@ -157,3 +157,33 @@ function revealMistery(misteryEnvelope) {
 
 
 console.log(revealMistery( pickMistery() ));
+
+//after that. Make a game constructor that creates
+// an game object given any array of characters, weapons and rooms
+function Game(characters, weapons, rooms) {
+  this.characters = characters;
+  this.weapons =weapons;
+  this.rooms = rooms;
+  this.init = function() {
+
+  }
+
+}
+var anGame  = new Game("joHn", "arrow", "woods");
+anGame.init();
+console.log(anGame);
+
+
+
+// var Game = {
+//   // initialize the game
+//   init: function (characters, weapons, rooms) {
+//     this.characters = characters;
+//     this.weapons = weapons;
+//     this.rooms = rooms;
+//   }
+// };
+
+// var game = Object.create(Game);
+// game.init("oreO", "pistol", 1, "bedroom");
+// console.log(game);

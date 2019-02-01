@@ -1,0 +1,36 @@
+#murderer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+#weapon {
+  font: 30px Verdana;
+}
+
+.room {
+    font: 30px Verdana;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ouput {
+
+}
+
+#button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}

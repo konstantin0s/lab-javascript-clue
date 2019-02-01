@@ -115,32 +115,21 @@ function randomSelector(array) {
 // console.log(randomSelector(weapons));
 
   // var misteryEnvelope = [];
-// function pickMistery() {
+function pickMistery() {
 
-//   let misteryEnvelope = [];
-//   //  return misteryEnvelope.push(randomSelector(charactersArray));
-//     misteryEnvelope.push(randomSelector(weapons));
-//     misteryEnvelope.push(randomSelector(rooms));
-//     misteryEnvelope.push(randomSelector(charactersArray));
-//      // randomSelector();
-// // /   / randomSelector();
+  let misteryEnvelope = [];
+  //  return misteryEnvelope.push(randomSelector(charactersArray));
+    misteryEnvelope.push(randomSelector(weapons));
+    misteryEnvelope.push(randomSelector(rooms));
+    misteryEnvelope.push(randomSelector(charactersArray));
+     // randomSelector();
+// /   / randomSelector();
 
-//     // console.log(misteryEnvelope[0].name);
-//     //  console.log(misteryEnvelope[1].name);
-//     //   console.log(misteryEnvelope[2].first_name);
-//     return misteryEnvelope
-//    }
-
-// console.log(pickMistery(charactersArray));
-
-  function pickMystery(charactersArray, weapons, rooms) {
-    var mysteryEnvelope = {}
-    mysteryEnvelope.murderer = randomSelector(charactersArray)
-    mysteryEnvelope.weapon = randomSelector(weapons)
-    mysteryEnvelope.room = randomSelector(rooms)
-
-    return mysteryEnvelope
-  }
+    // console.log(misteryEnvelope[0].name);
+    //  console.log(misteryEnvelope[1].name);
+    //   console.log(misteryEnvelope[2].first_name);
+    return misteryEnvelope
+   }
 
 
 //iteration 3
@@ -157,18 +146,17 @@ function randomSelector(array) {
 
 //  console.log( getMisteryEnvelope())
 // }
-// var theMystery = pickMistery(charactersArray, weapons, rooms);
+
 
 function revealMistery(misteryEnvelope) {
-    
+
     return misteryEnvelope[2].first_name + " " + misteryEnvelope[2].last_name + " killed Mr.Boddy using the " + misteryEnvelope[0].name + " " 
     + " n the " + misteryEnvelope[1].name + " !!!";
 
 }
 
 
-
-// console.log(revealMistery( pickMistery() ));
+console.log(revealMistery( pickMistery() ));
 
 //after that. Make a game constructor that creates
 // an game object given any array of characters, weapons and rooms
@@ -181,9 +169,9 @@ function Game(characters, weapons, rooms) {
   }
 
 }
-// var anGame  = new Game("joHn", "arrow", "woods");
-// anGame.init();
-// console.log(anGame);
+var anGame  = new Game("joHn", "arrow", "woods");
+anGame.init();
+console.log(anGame);
 
 
 
@@ -199,24 +187,3 @@ function Game(characters, weapons, rooms) {
 // var game = Object.create(Game);
 // game.init("oreO", "pistol", 1, "bedroom");
 // console.log(game);
-
-
-function showMistery(mystery) {
-    var mystery = pickMystery(charactersArray, weapons, rooms);
-    var charImg = mystery.murderer.image;
-    var img = document.getElementById("murderer").setAttribute("src", charImg);
-    // " killed Mr.Body in the " 
-    var ranRoom = document.getElementsByClassName("room")[0].innerHTML = mystery.room.name;
-    //  + " with a " + " " + 
-    var ranWeapon = document.getElementById("weapon").innerHTML = mystery.weapon.name;
-
-    var randomButton = img + " killed Mr.Body in the " + ranRoom + " with a " + ranWeapon;
-
-    return randomButton;
-}
-
-
-
-document.getElementById("button").addEventListener("click", function(){
-  document.getElementById("output").innerHTML = showMistery();
-});
